@@ -33,6 +33,3 @@ void PrintArray(double[,] matr)
         Console.WriteLine();
     }
 }
-
-
-
