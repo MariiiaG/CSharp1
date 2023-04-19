@@ -4,6 +4,9 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
+double [,] array = GetArray(3, 4, -10, 10);
+PrintArray(array); 
+
 double[,] GetArray(int m, int n, double minValue, double maxValue)
 {
     double[,] result = new double[m, n];
@@ -11,11 +14,12 @@ double[,] GetArray(int m, int n, double minValue, double maxValue)
     {
         for (int j = 0; j < n; j++)
         {
-            result[i, j] = generateDouble(minValue, maxValue);
+            result[i, j] = Math.Round(new Random().NextDouble() * -25 + 20, 1);
         }
     }
     return result;
 }
+
 
 void PrintArray(double[,] matr)
 {
@@ -30,7 +34,5 @@ void PrintArray(double[,] matr)
     }
 }
 
-double [,] array = GetArray(3, 4, -10, 10);
-PrintArray(array); // empty line as a break between 2 arrays
 
 
